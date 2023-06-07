@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Logo from '../Logo'
 import { ROUTES } from '@/constants/routes'

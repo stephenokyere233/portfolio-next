@@ -5,14 +5,14 @@ import { CONTACTS } from '@/constants/contact'
 
 const Footer = () => {
     return (
-        <footer className='pt-6 lg:px-10 text-xl'>
+        <footer className='pt-6 bg-b lg:px-10 text-xl'>
             <section className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
                 <section className={"flex lg:items-center flex-col"}>
                     <div className="flex-1">
                         <div className="w-[150px] mb-4">
                             <Logo />
                         </div>
-                        <p className="my-4">We plan and style your events on your call</p>
+                        <p className="my-4">Want to build something cool?</p>
                         <div className="flex gap-6 pb-4">
                             {
                                 CONTACTS.map((contact,index)=>{

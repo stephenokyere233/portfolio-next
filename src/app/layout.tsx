@@ -1,4 +1,6 @@
+import Header from '@/components/Header'
 import './globals.css'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,8 +15,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#222] text-white">
-        {children}
-        </body>
+        <div className="relative scroll-smooth select-none">
+          <Header />
+          <section className="max-w-7xl min-h-[70vh] px-4 mx-auto">
+            {children}
+          </section>
+          <Footer />
+        </div>
+      </body>
     </html>
   )
 }

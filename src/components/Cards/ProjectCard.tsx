@@ -13,12 +13,12 @@ interface Project {
 const ProjectCard: FC<Project> = ({ src, description, name, link }) => {
   return (
     <section
-      className="backdrop-blur-[25px] w-[200px] backdrop-saturate-[200%] h-[320px]  md:h-[450px] bg-[rgba(17, 25, 40, 0.37)]  rounded-2xl overflow-hidden shadow-2xl snap-y scroll-mt-[7.5em] "
+      className="backdrop-blur-[25px] min-w-[200px] backdrop-saturate-[200%] h-[320px]  md:h-[450px] bg-[rgba(17, 25, 40, 0.37)]  rounded-2xl overflow-hidden shadow-2xl snap-y scroll-mt-[7.5em] "
     >
       <Image
         src={src}
-        width={200}
-        height={200}
+        width={400}
+        height={400}
         alt={name}
         className="h-[200px] md:h-[320px] object-cover bg-cover w-full"
       />
