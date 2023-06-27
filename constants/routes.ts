@@ -5,7 +5,7 @@ export const ROUTES = [
     },
     {
         name: "About",
-        pathname: "/git #about"
+        pathname: "/#about"
     },
     {
         name: "Projects",
