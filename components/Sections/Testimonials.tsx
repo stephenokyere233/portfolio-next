@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../Title'
-import { TESTIMONIALS } from '@/constants/testimony'
 import TestimonialCard from '../Cards/TestimonialCard'
+import { TESTIMONIALS } from '../../constants/testimony'
 
 const Testimonials = () => {
   return (

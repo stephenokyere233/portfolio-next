@@ -1,13 +1,11 @@
-"use client"
 import React from 'react'
 import Logo from '../Logo'
-import { ROUTES } from '@/constants/routes'
+import { ROUTES } from '../../constants/routes'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 const Header = () => {
-    const routerPath = usePathname()
-    console.log("pathname",routerPath)
+    const router = useRouter()
     return (
         <header className={` mx-auto bg-[#222] lg:px-10 flex justify-between z-10 px-6 h-[5em] items-center sticky top-0`}>
             <Logo />
@@ -16,9 +14,8 @@ const Header = () => {
                     {
                         ROUTES.map(route => {
                             const { name, pathname } = route
-                            console.log(pathname)
                             return (
-                                <div className={routerPath === pathname ? 'navlink' : "link"} key={name} >
+                                <div className={router.pathname === pathname ? 'navlink' : "link"} key={name} >
                                     <Link href={pathname}>
                                         <p className='py-2'>
                                             {name}

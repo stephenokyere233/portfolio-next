@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title'
-import {SERVICES} from "@/constants/services"
+import { SERVICES } from '../../constants/services'
 
 const WhatIDo = () => {
   const styles = {
@@ -20,7 +20,7 @@ const WhatIDo = () => {
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold'>{title}</h2>
-                  <p className='text-xl'>
+                  <p className='text-lg'>
                    {description}
                   </p>
                 </div>

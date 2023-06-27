@@ -1,7 +1,7 @@
 import React from "react";
-import { PROJECTS } from "@/constants/projects";
 import ProjectCard from "../Cards/ProjectCard";
 import Title from "../Title";
+import { PROJECTS } from "../../constants/projects";
 
 const Projects = () => {
   return (
@@ -19,6 +19,7 @@ const Projects = () => {
             description={project.desc}
             src={project.imgSrc}
             link={project.siteLink}
+            techStack={project.techStack}
           />
         ))}
       </div>

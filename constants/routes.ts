@@ -5,15 +5,15 @@ export const ROUTES = [
     },
     {
         name: "About",
-        pathname: "#about"
+        pathname: "/git #about"
     },
     {
         name: "Projects",
-        pathname: "/projects"
+        pathname: "/#projects"
     },
     {
         name: "Blog",
-        pathname: "/post"
+        pathname: "/blog"
     },
 
 ]

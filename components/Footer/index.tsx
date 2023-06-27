@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Logo from '../Logo'
-import { CONTACTS } from '@/constants/contact'
+import { CONTACTS } from '../../constants/contact'
 
 const Footer = () => {
     return (
@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
                 </section>
             </section>
-            <div className="sm:text-md mx-auto mt-10  flex h-20 items-center justify-between border-t text-sm md:text-lg lg:text-xl">
+            <div className="sm:text-md mx-auto mt-10  flex h-20 items-center justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
                 <span>
                     Copyright © 2023 | <span className="gradient-text">My PortFolio</span>
                 </span>

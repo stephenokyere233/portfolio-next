@@ -40,7 +40,7 @@ const Hero = () => {
           <Link
             style={{ background: styles.background }}
             href="#contact"
-            className="py-[10px] px-6 "
+            className="py-[10px] px-6 hero-link"
           >
             Let&apos;s Link Up!&rarr;
           </Link>

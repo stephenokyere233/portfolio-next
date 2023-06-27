@@ -27,10 +27,10 @@ export const PROJECTS = [
   {
     id: 1,
     name: "Trailers Home",
-    imgSrc:
-      "https://res.cloudinary.com/devsteveserver/image/upload/v1673628462/palmflix_ytdjgz.png",
+    imgSrc: "/palmflix.png",
     desc: "Movie App with Trailers",
     siteLink: "https://palmflix.vercel.app/",
+    techStack: ["NextJS", "Firebase", "TailwindCSS"],
   },
   {
     id: 2,
@@ -39,5 +39,30 @@ export const PROJECTS = [
       "https://res.cloudinary.com/devsteveserver/image/upload/v1673629272/Palmplayy_blmfyh.png",
     desc: "Music APp with Shazam API",
     siteLink: "https://palmplayy.vercel.app/",
+    techStack: ["NextJS", "NextAuth", "TailwindCSS"],
+  },
+  {
+    id: 3,
+    name: "Be-Little",
+    imgSrc: "/belittle.png",
+    desc: "Image Compression App",
+    siteLink: "https://be-little.vercel.app/",
+    techStack: ["NextJS", "TailwindCSS"],
+  },
+  {
+    id: 4,
+    name: "Snap-A-Shot",
+    imgSrc: "/snapashot.png",
+    desc: "Twitter and showwcase thread to images",
+    siteLink: "https://snap-a-shot.vercel.app/",
+    techStack: ["NextJS", "TailwindCSS"],
+  },
+  {
+    id: 5,
+    name: "Palmstore",
+    imgSrc: "/palmstore1.png",
+    desc: "Twitter and showwcase thread to images",
+    siteLink: "https://palmstore .vercel.app/",
+    techStack: ["NextJS", "TailwindCSS"],
   },
 ];
