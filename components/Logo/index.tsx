@@ -7,8 +7,8 @@ const Logo = () => {
         <>
             <Link href="/">
                 <div className='flex items-center gap-3 '>
-                <Image src="/logo.png" alt="" className="w-[50px]" width={100} height={100} />
-                <h2 className='font-bold text-3xl uppercase tracking-wider'>
+                <Image src="/logo.png" alt="" className="w-[50px]" width={80} height={80} />
+                <h2 className='font-bold text-2xl uppercase tracking-wider'>
                    Steve
                 </h2>
                 </div>

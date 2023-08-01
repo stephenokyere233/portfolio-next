@@ -35,13 +35,6 @@ body::-webkit-scrollbar {
   background: blueviolet;
 }
 
-/* .title {
-  border-bottom: 6px solid rgba(169, 169, 169, 0.2);
-  background-image: radial-gradient(circle, #7F00FF, #4B0082);
-  background-size: 10% 6px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-} */
 .gradient-border-button {
   border: 3px solid;
   border-image: radial-gradient(circle, #4776e6, #8e54e9);
@@ -75,11 +68,3 @@ body::-webkit-scrollbar {
   background-size: 100% 3px; /* 3px is the height of the border */
   transition: background-size 0.3s ease-in-out;
 }
-
-/* .hero-link:hover{
-  border: 3px solid;
-  border-image: radial-gradient(circle, #4776e6, #8e54e9);
-  border-image-slice: 1;
-  border-radius: 20px;
-  padding: 10px 20px;
-} */

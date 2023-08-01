@@ -23,9 +23,9 @@ const ProjectCard: FC<Project> = ({
         width={400}
         height={400}
         alt={name}
-        className="h-[200px] opacity-80 md:h-[320px] object-cover bg-cover w-full"
+        className=" opacity-80  object-cover bg-contain w-full"
       />
-      <article className="px-6 py-4 relative leading-[2em] ">
+      <article className="px-6 py-8 relative leading-[2em] ">
         <h3 className="font-semibold text-xl">{name}</h3>
         <p>{description}</p>
         <div className="flex flex-wrap gap-2 w-full">
@@ -40,7 +40,7 @@ const ProjectCard: FC<Project> = ({
             );
           })}
         </div>
-        <Link href={link} className=" absolute top-4 right-4 p-3 border rounded-lg">
+        <Link href={link} className=" absolute top-4 right-4 p-2 md:p-3 border rounded-lg">
           <MdArrowForwardIos size={28}/>  
         </Link>
       </article>

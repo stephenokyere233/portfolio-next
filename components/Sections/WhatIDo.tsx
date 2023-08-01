@@ -9,7 +9,7 @@ const WhatIDo = () => {
   return (
     <section className='mb-20'>
       <Title label='What I Do' />
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
         {
           SERVICES.map((service,index)=>{
             const {title,description}=service
@@ -20,7 +20,7 @@ const WhatIDo = () => {
                 </div>
                 <div>
                   <h2 className='text-xl font-semibold'>{title}</h2>
-                  <p className='text-lg'>
+                  <p className='md:text-lg'>
                    {description}
                   </p>
                 </div>

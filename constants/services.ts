@@ -1,23 +1,23 @@
-import { HiCode, HiPuzzle } from "react-icons/hi";
+import { HiCode, HiPuzzle, HiCursorClick } from "react-icons/hi";
 import {AiFillCode} from "react-icons/ai"
 export const SERVICES = [
   {
-    title: "Frontend Development",
+    title: "Web Development",
     description:
       "I have expertise in building engaging user interfaces and interactive experiences using HTML, CSS, and JavaScript. I am skilled in popular front-end frameworks like React and Next.js. I also have experience using Tailwind CSS and TypeScript. Additionally, I have a strong grasp of responsive design principles and ensuring compatibility across different browsers.",
     icon: AiFillCode,
   },
   {
-    title: "React Native Development",
+    title: "Mobile App Development",
     description:
       "Extensive experience in developing cross-platform mobile applications using React Native framework. Proficient in leveraging platform-specific APIs and integrating third-party libraries. Familiarity with Expo and React Navigation for streamlined development and navigation.",
     icon: HiCode,
   },
   {
-    title: "User Interface Design",
+    title: "UI/UX Design",
     description:
-      "Knowledgeable in UI/UX principles and best practices, ensuring visually appealing and intuitive user interfaces. Proficient in using design tools such as Adobe XD or Sketch to create wireframes and prototypes. Strong attention to detail and ability to create engaging user experiences.",
-    icon: HiCode,
+      "I'm not a professional UI/UX designer, but if you like this page, I may be able to help you with your next project.",
+    icon: HiCursorClick,
   },
   {
     title: "Problem Solving and Debugging",
