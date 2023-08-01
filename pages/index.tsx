@@ -18,7 +18,6 @@ export default function Home() {
       <Testimonials />
       <Skills />
       <FooterBanner />
-      {/* <Contact /> */}
     </>
   );
 }

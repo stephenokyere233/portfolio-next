@@ -5,14 +5,14 @@ import { CONTACTS } from '../../constants/contact';
 
 const Hero = () => {
   const styles = {
-    height: "calc(100dvh - 0em)",
+    // height: "calc(100dvh - 0em)",
     background: "rgba(169, 169, 169, 0.2)"
   }
 
   return (
     <section
-      style={{ height: styles.height }}
-      className="overflow-hidden h-max flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center "
+      // style={{ height: styles.height }}
+      className="overflow-hidden flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center "
     >
       <div style={{ background: styles.background }} className="rounded-full">
         <Image
