@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       // style={{ height: styles.height }}
-      className="overflow-hidden flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center "
+      className="overflow-hidden lg:h-[100dvh] flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center "
     >
       <div style={{ background: styles.background }} className="rounded-full">
         <Image
