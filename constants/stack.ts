@@ -1,6 +1,6 @@
 import { FaCss3, FaHtml5, FaJs, FaReact, FaGit, FaSass } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb"
-import { SiTailwindcss, SiRedux } from "react-icons/si"
+import { SiTailwindcss, SiRedux, SiFirebase } from "react-icons/si";
 
 export const STACK = [
   {
@@ -17,26 +17,30 @@ export const STACK = [
   },
   {
     name: "ReactJS",
-    icon: FaReact
+    icon: FaReact,
   },
   {
     name: "NextJS",
-    icon: TbBrandNextjs
+    icon: TbBrandNextjs,
   },
   {
     name: "Sass",
-    icon: FaSass
+    icon: FaSass,
   },
   {
     name: "Git",
-    icon: FaGit
+    icon: FaGit,
   },
   {
     name: "TailwindCSS",
-    icon: SiTailwindcss
+    icon: SiTailwindcss,
   },
   {
     name: "Redux",
-    icon: SiRedux
-  }
+    icon: SiRedux,
+  },
+  {
+    name: "Firebase",
+    icon: SiFirebase,
+  },
 ];

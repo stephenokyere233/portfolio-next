@@ -15,7 +15,7 @@ export default function Home() {
       <WhatIDo />
       <About />
       <Projects />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Skills />
       <FooterBanner />
     </>
