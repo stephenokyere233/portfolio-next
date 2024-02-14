@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import Link from 'next/link';
-import { CONTACTS } from '../../constants/contact';
+import Link from "next/link";
+import { CONTACTS } from "../../constants/contact";
 
 const Hero = () => {
   const styles = {
     // height: "calc(100dvh - 0em)",
-    background: "rgba(169, 169, 169, 0.2)"
-  }
+    background: "rgba(169, 169, 169, 0.2)",
+  };
 
   return (
     <section
@@ -17,7 +17,7 @@ const Hero = () => {
       <div style={{ background: styles.background }} className="rounded-full">
         <Image
           className="p-6 md:w-[30em] rounded-[9999px] overflow-x-hidden"
-          src="/profile.jpeg"
+          src="/stephen.jpg"
           alt=""
           width={300}
           height={400}
@@ -31,11 +31,11 @@ const Hero = () => {
           Stephen Okyere
         </h3>
         <h3 className="md:text-xl text-[18px] font-medium">
-          I am a proficient frontend developer with years of experience in the
-          web and mobile app development industry. I specialize in creating
-          visually appealing and intuitive websites and mobile applications to
-          deliver exceptional user experiences. I have a sharp eye for detail
-          and am dedicated to turning your web vision into reality.
+          I am a proficient frontend developer with years of experience in the web and
+          mobile app development industry. I specialize in creating visually appealing and
+          intuitive websites and mobile applications to deliver exceptional user
+          experiences. I have a sharp eye for detail and am dedicated to turning your web
+          vision into reality.
         </h3>
         <div className="flex gap-6 pb-4">
           {CONTACTS.map((contact, index) => {
@@ -61,6 +61,6 @@ const Hero = () => {
       </section>
     </section>
   );
-}
+};
 
-export default Hero
+export default Hero;

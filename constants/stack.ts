@@ -3,6 +3,14 @@ import { TbBrandNextjs } from "react-icons/tb"
 import { SiTailwindcss, SiRedux, SiFirebase } from "react-icons/si";
 
 export const STACK = [
+    {
+    name: "ReactJS",
+    icon: FaReact,
+  },
+  {
+    name: "NextJS",
+    icon: TbBrandNextjs,
+  },
   {
     name: "HTML5",
     icon: FaHtml5,
@@ -14,14 +22,6 @@ export const STACK = [
   {
     name: "JavaScript",
     icon: FaJs,
-  },
-  {
-    name: "ReactJS",
-    icon: FaReact,
-  },
-  {
-    name: "NextJS",
-    icon: TbBrandNextjs,
   },
   {
     name: "Sass",

@@ -23,7 +23,30 @@ export const PROJECTS = [
   //   desc: "A Rock-Paper-Scissors Game",
   //   siteLink: "https://rpsgamex.netlify.app/",
   // },
-
+  {
+    id: 6,
+    name: "Bryllupslisten",
+    imgSrc: "/bryllup.png",
+    desc: "Ecommerce site",
+    siteLink: "https://bryllupslisten.no/",
+    techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    id: 7,
+    name: "Macel Care Limited",
+    imgSrc: "/marcel.png",
+    desc: "Health Care website",
+    siteLink: "https://macelcare.com/",
+    techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    id: 3,
+    name: "Openwaver Company Limited",
+    imgSrc: "/openwaver.png",
+    desc: "Openwaver company website",
+    siteLink: "https://openwaver.com/",
+    techStack: ["NextJS", "TailwindCSS"],
+  },
   {
     id: 1,
     name: "Trailers Home",
@@ -57,30 +80,7 @@ export const PROJECTS = [
     siteLink: "https://be-little.vercel.app/",
     techStack: ["NextJS", "TailwindCSS"],
   },
-  {
-    id: 3,
-    name: "Openwaver Company Limited",
-    imgSrc: "/openwaver.png",
-    desc: "Openwaver company website",
-    siteLink: "https://https://openwaver.com/",
-    techStack: ["NextJS", "TailwindCSS"],
-  },
-  {
-    id: 6,
-    name: "Brylluplisten",
-    imgSrc: "/bryllup.png",
-    desc: "Ecommerce site",
-    siteLink: "https://bryllupslisten.no/",
-    techStack: ["NextJS", "TailwindCSS", "Firebase"],
-  },
-  {
-    id: 7,
-    name: "Marcel Care Limited",
-    imgSrc: "/marcel.png",
-    desc: "Health Care website",
-    siteLink: "https://de-marcel.vercel.app/",
-    techStack: ["NextJS", "TailwindCSS", "Firebase"],
-  },
+
   {
     id: 8,
     name: "Waverpass",

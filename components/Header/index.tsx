@@ -26,7 +26,7 @@ const Header = () => {
                         })
                     }
                 </nav>
-                <Link className='gradient-border-button' href="/resume-current.pdf" >
+                <Link className='gradient-border-button' href="/resume.pdf" >
                     Download CV
                 </Link>
             </div>
