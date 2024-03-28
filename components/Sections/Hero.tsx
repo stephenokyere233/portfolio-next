@@ -25,17 +25,17 @@ const Hero = () => {
       </div>
       <section className="w-full lg:w-[650px] flex flex-col gap-3 ">
         <p className="font-semibold text-lg opacity-60 ">
-          Frontend Developer &clubs; Content Creator
+          Software Developer &clubs; Content Creator
         </p>
         <h3 className="gradient-text text-4xl font-bold tracking-wider">
           Stephen Okyere
         </h3>
         <h3 className="md:text-xl text-[18px] font-medium">
-          I am a proficient frontend developer with years of experience in the web and
+          I am a proficient software developer with years of experience in the web and
           mobile app development industry. I specialize in creating visually appealing and
           intuitive websites and mobile applications to deliver exceptional user
-          experiences. I have a sharp eye for detail and am dedicated to turning your web
-          vision into reality.
+          experiences and I love to build cool stuff. I have a sharp eye for detail and am
+          dedicated to turning your web vision into reality.
         </h3>
         <div className="flex gap-6 pb-4">
           {CONTACTS.map((contact, index) => {

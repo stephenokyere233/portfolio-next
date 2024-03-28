@@ -3,5 +3,4 @@ export interface Project {
   src: string;
   description: string;
   link: string;
-  techStack: string[];
 }

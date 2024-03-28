@@ -1,28 +1,28 @@
 import { HiCode, HiPuzzle, HiCursorClick } from "react-icons/hi";
-import {AiFillCode} from "react-icons/ai"
+import { AiFillCode } from "react-icons/ai";
 export const SERVICES = [
   {
     title: "Web Development",
     description:
-      "I have expertise in building engaging user interfaces and interactive experiences using HTML, CSS, and JavaScript. I am skilled in popular front-end frameworks like React and Next.js. I also have experience using Tailwind CSS and TypeScript. Additionally, I have a strong grasp of responsive design principles and ensuring compatibility across different browsers.",
+      "Proficient in crafting engaging user interfaces and dynamic experiences using HTML, CSS, and JavaScript. Skilled in utilizing popular front-end frameworks such as React, Vue, and Next.js. Experienced with Tailwind CSS and TypeScript to ensure efficient and scalable development. Strong emphasis on responsive design and cross-browser compatibility.",
     icon: AiFillCode,
   },
   {
     title: "Mobile App Development",
     description:
-      "Extensive experience in developing cross-platform mobile applications using React Native framework. Proficient in leveraging platform-specific APIs and integrating third-party libraries. Familiarity with Expo and React Navigation for streamlined development and navigation.",
+      "Extensive expertise in developing cross-platform mobile applications with React Native framework. Proficient in leveraging platform-specific APIs and integrating third-party libraries for enhanced functionality. Familiarity with Expo and React Navigation to streamline development and optimize navigation.",
     icon: HiCode,
   },
   {
     title: "UI/UX Design",
     description:
-      "I'm not a professional UI/UX designer, but if you like this page, I may be able to help you with your next project.",
+      "While not a professional UI/UX designer, I possess the skills to create visually appealing interfaces and user experiences. Let's discuss how I can assist with your next project.",
     icon: HiCursorClick,
   },
   {
     title: "Problem Solving and Debugging",
     description:
-      "Analytical mindset with strong problem-solving skills to troubleshoot and resolve technical issues efficiently. Proficient in using debugging tools and techniques to identify and fix software bugs. Continuously stay updated with the latest development practices and technologies.",
+      "Equipped with an analytical mindset and strong problem-solving abilities to efficiently troubleshoot and resolve technical issues. Proficient in utilizing debugging tools and techniques to identify and address software bugs promptly. Committed to staying updated on the latest development practices and technologies.",
     icon: HiPuzzle,
   },
 ];
