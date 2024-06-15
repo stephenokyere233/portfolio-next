@@ -4,19 +4,19 @@ import Head from "next/head";
 const MetaHead = () => {
   return (
     <Head>
-      <title>Stephen Okyere — Frontend Developer</title>
-      <meta name="title" content="Stephen Okyere — Frontend Developer" />
+      <title>Stephen Okyere — Software Developer</title>
+      <meta name="title" content="Stephen Okyere — Software Developer" />
       <meta
         name="description"
-        content="Skilled frontend developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
+        content="Skilled Software developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
       />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://devsteve.pro/" />
-      <meta property="og:title" content="Stephen Okyere — Frontend Developer" />
+      <meta property="og:title" content="Stephen Okyere — Software Developer" />
       <meta
         property="og:description"
-        content="Skilled frontend developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
+        content="Skilled Software developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
       />
       <meta
         property="og:image"
@@ -25,13 +25,10 @@ const MetaHead = () => {
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://devsteve.pro/" />
-      <meta
-        property="twitter:title"
-        content="Stephen Okyere — Frontend Developer"
-      />
+      <meta property="twitter:title" content="Stephen Okyere — Software Developer" />
       <meta
         property="twitter:description"
-        content="Skilled frontend developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
+        content="Skilled Software developer with expertise in React, Next.js, and Tailwind. I craft stunning, intuitive websites that deliver exceptional user experiences. Turning your vision into reality on the web, one pixel at a time."
       />
       <meta
         property="twitter:image"

@@ -10,17 +10,17 @@ const Hero = () => {
   };
 
   return (
-    <section
-      // style={{ height: styles.height }}
-      className="overflow-hidden lg:h-[100dvh] flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center "
-    >
-      <div style={{ background: styles.background }} className="rounded-full">
+    <section className="overflow-hidden lg:h-[100dvh] flex flex-col lg:flex-row gap-4 mb-20 py-10 justify-evenly items-center ">
+      <div
+        style={{ background: styles.background }}
+        className="rounded-full max-w-[30em] overflow-clip max-h-[30em] w-[20em] h-[20em] sm:w-[30em] sm:h-[30em] p-6"
+      >
         <Image
-          className="p-6 md:w-[30em] rounded-[9999px] overflow-x-hidden"
-          src="/stephen.jpg"
-          alt=""
+          className="w-full h-full object-cover rounded-full"
+          src="/profile1.JPG"
+          alt="Stephen Okyere"
           width={300}
-          height={400}
+          height={300}
         />
       </div>
       <section className="w-full lg:w-[650px] flex flex-col gap-3 ">
