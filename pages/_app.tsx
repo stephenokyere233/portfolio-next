@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
 import FAB from "@/fab";
-import Footer from "@/footer";
+import Footer from "@/footer/index";
 import Header from "@/header";
 
 export default function App({ Component, pageProps }: AppProps) {
