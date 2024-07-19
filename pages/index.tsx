@@ -1,8 +1,8 @@
 import MetaHead from "@/meta";
-import About from "@/sections/about";
-import Hero from "@/sections/hero";
-import WhatIDo from "@/sections/what-i-do";
-import Projects from "@/sections/works";
+import Hero from "../components/sections/hero";
+import WhatIDo from "../components/sections/what-i-do";
+import About from "../components/sections/about";
+import Projects from "../components/sections/works";
 
 const Home = () => {
   return (
