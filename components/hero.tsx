@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CONTACTS } from "../../constants";
+import { CONTACTS } from "../constants";
 import WidthConstraint from "@/width-constraint";
 
 const Hero = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "@/title";
-import { STACK } from "../../constants";
+import { STACK } from "../constants";
 
 const Skills = () => {
   const skillStyle = `px-2 py-2 flex items-center w-[170px] rounded-[9999px] justify-center shadow-lg shadow-gray-300'`;

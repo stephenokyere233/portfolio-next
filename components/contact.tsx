@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACTS } from "../../constants";
+import { CONTACTS } from "../constants";
 
 const Contact = () => {
   return (

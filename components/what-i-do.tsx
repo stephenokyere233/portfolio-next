@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "@/title";
-import { SERVICES } from "../../constants";
+import { SERVICES } from "../constants";
 import WidthConstraint from "@/width-constraint";
 
 const WhatIDo = () => {

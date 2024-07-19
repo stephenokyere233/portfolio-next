@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "@/cards/project-card";
 import Title from "@/title";
-import { PROJECTS } from "../../constants";
+import { PROJECTS } from "../constants";
 import WidthConstraint from "@/width-constraint";
 
 const Projects = () => {

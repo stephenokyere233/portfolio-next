@@ -27,9 +27,6 @@
       "@/*": [
         "./components/*",
       ],
-      "@/constants": [
-        "./constants/*"
-      ]
     }
   },
   "include": [
