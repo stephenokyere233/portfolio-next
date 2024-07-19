@@ -3,14 +3,13 @@ import Logo from "@/logo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ROUTES } from "../constants";
+import WidthConstraint from "./width-constraint";
 
 const Header = () => {
   const router = useRouter();
   return (
-    <header
-      className={` bg-[#222] w-screen lg:px-10 z-10 px-6 h-[5em] flex items-center  fixed top-0`}
-    >
-      <div className=" mx-auto max-w-[1350px] w-full flex justify-between items-center">
+    <header className={` bg-[#222] w-screen z-10 h-[5em] flex items-center  fixed top-0`}>
+      <WidthConstraint className=" w-full flex justify-between items-center">
         <Logo />
         <div className="flex items-center gap-10">
           <nav className=" hidden lg:flex gap-x-10 text-[18px] font-semibold">
@@ -32,7 +31,7 @@ const Header = () => {
             Download CV
           </Link>
         </div>
-      </div>
+      </WidthConstraint>
     </header>
   );
 };

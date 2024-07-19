@@ -1,12 +1,22 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Logo from "@/logo";
 import { CONTACTS } from "../../constants";
+import WidthConstraint from "@/width-constraint";
+import FooterBanner from "./banner";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
   return (
-    <footer className="pt-6 bg-b lg:px-10 max-w-[1500px] mx-auto text-[18px] md:text-xl">
-      <section className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
+    <footer className="pt-6 space-y-10  text-[18px] md:text-xl">
+      {pathname !== "/blog" && (
+        <WidthConstraint>
+          <FooterBanner />
+        </WidthConstraint>
+      )}
+      <WidthConstraint className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
         <section className={"flex lg:items-center flex-col"}>
           <div className="flex-1">
             <div className="w-[150px] mb-4">
@@ -51,8 +61,8 @@ export default function Footer() {
             </div>
           </div>
         </section>
-      </section>
-      <div className="sm:text-md mx-auto mt-10 flex-col md:flex-row  flex h-20 items-start px-5 md:items-center justify-center md:justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
+      </WidthConstraint>
+      <WidthConstraint className="sm:text-md flex-col md:flex-row  gap-4 flex items-start py-5 md:items-center justify-center md:justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
         <span>
           Copyright © {new Date().getFullYear()} |{" "}
           <span className="gradient-text">My PortFolio</span>
@@ -63,7 +73,7 @@ export default function Footer() {
             dev_steve
           </Link>
         </span>
-      </div>
+      </WidthConstraint>
     </footer>
   );
 }
