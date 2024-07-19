@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "../Logo";
-import { CONTACTS } from "../../constants/contact";
+import Logo from "../logo";
+import { CONTACTS } from "../../constants";
 
 const Footer = () => {
   return (
-    <footer className="pt-6 bg-b lg:px-10 text-[18px] md:text-xl">
+    <footer className="pt-6 bg-b lg:px-10 max-w-[1500px] mx-auto text-[18px] md:text-xl">
       <section className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
         <section className={"flex lg:items-center flex-col"}>
           <div className="flex-1">
@@ -22,7 +22,11 @@ const Footer = () => {
                 );
               })}
             </div>
-            <p className="mt-4">stephenokyere621@gmail.com</p>
+            <p className="mt-4">
+              <Link href="mailto:stephenokyere621@gmail.com">
+                stephenokyere621@gmail.com
+              </Link>
+            </p>
           </div>
         </section>
         <section className="flex flex-col">
@@ -31,9 +35,9 @@ const Footer = () => {
               Quick links
             </h3>
             <div className="mt-4 flex flex-col gap-3 capitalize">
-              <Link href="#about">About</Link>
-              <Link href="#services">Services</Link>
-              <Link href="#gallery">Projects</Link>
+              <Link href="/#about">About</Link>
+              <Link href="/contact">Services</Link>
+              <Link href="/#projects">Projects</Link>
             </div>
           </div>
         </section>
@@ -43,13 +47,12 @@ const Footer = () => {
               important links
             </h3>
             <div className="mt-4 flex flex-col gap-3 capitalize">
-              <Link href="/about">Contact</Link>
-              <Link href="/contact">privacy policy</Link>
+              <Link href="/contact">Contact</Link>
             </div>
           </div>
         </section>
       </section>
-      <div className="sm:text-md mx-auto mt-10 flex-col  flex h-20 items-start px-5 md:items-center justify-center md:justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
+      <div className="sm:text-md mx-auto mt-10 flex-col md:flex-row  flex h-20 items-start px-5 md:items-center justify-center md:justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
         <span>
           Copyright © {new Date().getFullYear()} |{" "}
           <span className="gradient-text">My PortFolio</span>

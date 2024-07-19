@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React from "react";
 import Head from "next/head";
 
-const BlogMeta: FC<{ title: string }> = ({ title }) => {
+const BlogMeta = ({ title }: { title: string }) => {
   return (
     <Head>
       <title>{title}</title>

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 
-const FAB: FC<{ title: string; icon: ReactNode }> = ({ title, icon }) => {
+const FAB = ({ title, icon }: { title: string; icon: ReactNode }) => {
   const router = useRouter();
   const goToContact = () => {
     router.push("/contact");

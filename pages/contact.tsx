@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col py-10">
+    <div className="flex justify-center items-center flex-col py-20 pt-32">
       <h2 className="text-3xl font-bold mb-2 uppercase tracking-wider gradient-text">
         Hire Me!
       </h2>
@@ -81,40 +81,43 @@ const Contact = () => {
         className="text-xl w-full md:max-w-[550px] md:min-w-[550px] py-4 space-y-4"
         onSubmit={(e) => handleSubmit(e, form)}
       >
-        <div className="">
+        <div className="space-y-2">
           <label htmlFor="name">Name / Company Name</label> <br />
           <input
             type="text"
             name="name"
             value={form.name}
             onChange={handleChange}
-            className="p-3 w-full px-4 rounded-sm focus:outline"
+            placeholder="Enter your name/company name"
+            className="p-3 w-full px-4 rounded-md focus:outline"
             style={{ background: "rgba(169, 169, 169, 0.2)" }}
           />
         </div>
-        <div className="">
+        <div className="space-y-2">
           <label htmlFor="">Email</label> <br />
           <input
             type="email"
             name="email"
             value={form.email}
             onChange={handleChange}
-            className="p-3 w-full px-4 rounded-sm focus:outline"
+            placeholder="Enter your email"
+            className="p-3 w-full px-4 rounded-md focus:outline"
             style={{ background: "rgba(169, 169, 169, 0.2)" }}
           />
         </div>
-        <div className="">
+        <div className="space-y-2">
           <label htmlFor="">Location</label> <br />
           <input
             type="address"
             name="location"
             value={form.location}
             onChange={handleChange}
-            className="p-3 w-full px-4 rounded-sm focus:outline"
+            placeholder="Enter your location"
+            className="p-3 w-full px-4 rounded-md focus:outline"
             style={{ background: "rgba(169, 169, 169, 0.2)" }}
           />
         </div>{" "}
-        <div className="">
+        <div className="space-y-2">
           <label htmlFor="">Message</label> <br />
           <textarea
             cols={10}
@@ -122,14 +125,11 @@ const Contact = () => {
             name="message"
             value={form.message}
             onChange={handleChange}
-            className="p-3 w-full px-4 rounded-sm focus:outline"
+            className="p-3 w-full px-4 rounded-md focus:outline"
             style={{ background: "rgba(169, 169, 169, 0.2)" }}
           />
         </div>
-        <button
-          className="flex items-center  justify-center px-6 w-[200px] cursor-pointer p-3 text-xl  gradient-bg font-bold"
-          // onClick={goToContact}
-        >
+        <button className="flex items-center rounded-full  justify-center px-6 w-[200px] cursor-pointer p-3 text-xl  gradient-bg font-bold">
           {loading ? <PiSpinner className="animate-spin" /> : "Submit"}
         </button>
       </form>

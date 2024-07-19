@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Project } from "../../interfaces";
 import { MdArrowForwardIos } from "react-icons/md";
 
-const ProjectCard: FC<Project> = ({ src, description, name, link }) => {
+const ProjectCard = ({ src, description, name, link }: Project) => {
   return (
     <section
       style={{ background: "rgba(17, 25, 40, 0.37)" }}
@@ -20,9 +20,9 @@ const ProjectCard: FC<Project> = ({ src, description, name, link }) => {
       <article className="px-6 py-8 relative leading-[2em] ">
         <h3 className="font-semibold text-xl">{name}</h3>
         <p>{description}</p>
-
         <Link
           href={link}
+          target="_blank"
           className=" absolute top-4 right-4 p-2 md:p-3 border rounded-lg"
         >
           <MdArrowForwardIos size={28} />

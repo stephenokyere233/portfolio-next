@@ -1,11 +1,9 @@
-import FooterBanner from "../components/Footer/banner";
-import MetaHead from "../components/MetaHead";
-import About from "../components/Sections/About";
-import Hero from "../components/Sections/Hero";
-// import Skills from "../components/Sections/Skills";
-// import Testimonials from "../components/Sections/Testimonials";
-import WhatIDo from "../components/Sections/WhatIDo";
-import Projects from "../components/Sections/Works";
+import FooterBanner from "../components/footer/banner";
+import MetaHead from "../components/meta";
+import About from "../components/sections/about";
+import Hero from "../components/sections/hero";
+import WhatIDo from "../components/sections/what-i-do";
+import Projects from "../components/sections/works";
 
 export default function Home() {
   return (
@@ -15,8 +13,6 @@ export default function Home() {
       <WhatIDo />
       <About />
       <Projects />
-      {/* <Testimonials /> */}
-      {/* <Skills /> */}
       <FooterBanner />
     </>
   );
