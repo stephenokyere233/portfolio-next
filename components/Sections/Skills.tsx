@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../title";
+import Title from "@/title";
 import { STACK } from "../../constants";
 
 const Skills = () => {

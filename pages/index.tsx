@@ -1,9 +1,9 @@
-import FooterBanner from "../components/footer/banner";
-import MetaHead from "../components/meta";
-import About from "../components/sections/about";
-import Hero from "../components/sections/hero";
-import WhatIDo from "../components/sections/what-i-do";
-import Projects from "../components/sections/works";
+import FooterBanner from "@/footer/banner";
+import MetaHead from "@/meta";
+import About from "@/sections/about";
+import Hero from "@/sections/hero";
+import WhatIDo from "@/sections/what-i-do";
+import Projects from "@/sections/works";
 
 export default function Home() {
   return (

@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "../logo";
+import Logo from "@/logo";
 import { CONTACTS } from "../../constants";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="pt-6 bg-b lg:px-10 max-w-[1500px] mx-auto text-[18px] md:text-xl">
       <section className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
@@ -66,6 +66,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

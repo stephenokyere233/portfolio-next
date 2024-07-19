@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../header";
-import Footer from "../footer";
-import FAB from "../fab";
+import Header from "@/header";
+import Footer from "@/footer";
+import FAB from "@/fab";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (

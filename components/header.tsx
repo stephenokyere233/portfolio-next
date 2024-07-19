@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./logo";
+import Logo from "@/logo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { ROUTES } from "../constants";
