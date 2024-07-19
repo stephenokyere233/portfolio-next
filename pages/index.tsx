@@ -1,4 +1,3 @@
-import FooterBanner from "@/footer/banner";
 import MetaHead from "@/meta";
 import About from "@/sections/about";
 import Hero from "@/sections/hero";
