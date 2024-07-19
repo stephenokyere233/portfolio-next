@@ -3,7 +3,7 @@ import Header from "../header";
 import Footer from "../footer";
 import FAB from "../fab";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="relative scroll-smooth select-none">
       <FAB icon={<></>} title="Hire Me" />
@@ -14,4 +14,4 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;
