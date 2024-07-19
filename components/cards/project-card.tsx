@@ -15,7 +15,7 @@ const ProjectCard = ({ src, description, name, link }: Project) => {
         width={400}
         height={400}
         alt={name}
-        className=" opacity-80 lg:h-[300px] object-cover bg-contain w-full"
+        className=" lg:h-[300px] object-cover bg-contain w-full"
       />
       <article className="px-6 py-8 relative leading-[2em] ">
         <h3 className="font-semibold text-xl">{name}</h3>

@@ -26,6 +26,13 @@ export const PROJECTS = [
     // techStack: ["NextJS", "TailwindCSS", "Firebase"],
   },
   {
+    name: "Tigerians NFT",
+    imgSrc: "/tigerians.png",
+    desc: "NFT Project",
+    siteLink: "https://tigerians.io/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
     name: "Yeb Gallery",
     imgSrc: "/yeb-gallery.png",
     desc: "An art gallery website",
@@ -35,7 +42,7 @@ export const PROJECTS = [
   {
     name: "Bryllupslisten",
     imgSrc: "/bryllup.png",
-    desc: "Ecommerce site",
+    desc: "Ecommerce and Wedding management app",
     siteLink: "https://bryllupslisten.no/",
     // techStack: ["NextJS", "TailwindCSS", "Firebase"],
   },
@@ -49,8 +56,8 @@ export const PROJECTS = [
 
   {
     name: "Macel Care Limited",
-    imgSrc: "/marcel.png",
-    desc: "Health Care website",
+    imgSrc: "/macel.png",
+    desc: "Health Care web",
     siteLink: "https://macelcare.com/",
     // techStack: ["NextJS", "TailwindCSS", "Firebase"],
   },
@@ -72,7 +79,7 @@ export const PROJECTS = [
     name: "Trailers Home",
     imgSrc: "/palmflix.png",
     desc: "Movie App with Trailers",
-    siteLink: "https://palmflix.vercel.app/",
+    siteLink: "https://palmflix.ce055.web.app/",
     // techStack: ["NextJS", "Firebase", "TailwindCSS", "ContextAPI"],
   },
   {
