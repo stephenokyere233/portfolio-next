@@ -4,7 +4,7 @@ import Hero from "@/sections/hero";
 import WhatIDo from "@/sections/what-i-do";
 import Projects from "@/sections/works";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <MetaHead />
@@ -14,4 +14,6 @@ export default function Home() {
       <Projects />
     </>
   );
-}
+};
+
+export default Home;
