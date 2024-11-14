@@ -19,20 +19,6 @@ import { SiTailwindcss, SiRedux, SiFirebase } from "react-icons/si";
 
 export const PROJECTS = [
   {
-    name: "Chain 2055",
-    imgSrc: "/chain.png",
-    desc: "An event registration website",
-    siteLink: "https://chain2055.com/",
-    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
-  },
-  {
-    name: "Tigerians NFT",
-    imgSrc: "/tigerians.png",
-    desc: "NFT Project",
-    siteLink: "https://tigerians.io/",
-    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
-  },
-  {
     name: "Yeb Gallery",
     imgSrc: "/yeb-gallery.png",
     desc: "An art gallery website",
@@ -74,6 +60,49 @@ export const PROJECTS = [
     desc: "Bithub company website",
     siteLink: "https://bithubinc.com/",
     // techStack: ["NextJS", "TailwindCSS"],
+  },
+  {
+    name: "Fifth Avenue Apartments",
+    imgSrc: "/fifthavenue.png",
+    desc: "An apartment booking website",
+    siteLink: "https://www.fifthavenueluxuryapartments.com/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    name: "Kobby's Apartments",
+    imgSrc: "/kobbysapartment.png",
+    desc: "An apartment website",
+    siteLink: "https://kobbysapartments.vercel.app/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    name: "Ton Summit",
+    imgSrc: "/tonsummit.png",
+    desc: "An event website",
+    siteLink: "https://www.tonsummit.org/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    name: "Web3 Nigeria",
+    imgSrc: "/web3nigeria.png",
+    desc: "Web3 community landing page",
+    siteLink: "https://www.web3nigeria.org/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+
+  {
+    name: "Chain 2055",
+    imgSrc: "/chain.png",
+    desc: "An event registration website",
+    siteLink: "https://chain2055.com/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
+  },
+  {
+    name: "Tigerians NFT",
+    imgSrc: "/tigerians.png",
+    desc: "NFT Project",
+    siteLink: "https://tigerians.io/",
+    // techStack: ["NextJS", "TailwindCSS", "Firebase"],
   },
   {
     name: "Trailers Home",
