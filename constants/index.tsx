@@ -38,8 +38,7 @@ export const SITE = {
     "I came to programming later than most people do, but it stuck fast. I learn by building things, and I try to ship something new whenever I can.",
   aboutFocus:
     "Most days I'm shipping across platforms — web apps, mobile builds, the occasional side project. I care about clean code, interfaces that make sense, and work that holds up when real people use it.",
-  footerTagline:
-    "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
+  footerTagline: "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
   worksIntro:
     "Client websites, web apps, and side projects — a selection of what I've built and shipped.",
   contactIntro:
@@ -273,7 +272,8 @@ export const PROJECTS = [
     name: "Rogue Reports",
     imgSrc: "/projects/rogue-reports.png",
     desc: "Independent journalism and newsletter",
-    siteLink: "https://www.roguereports.com/",
+    // siteLink: "https://www.roguereports.com/",
+    siteLink: "https://roguereports.vercel.app/",
   },
   {
     name: "Palmplayy",
