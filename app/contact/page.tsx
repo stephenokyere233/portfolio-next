@@ -1,5 +1,7 @@
 import ContactForm from "@/contact-form";
+import JsonLd from "@/json-ld";
 import { SITE } from "../../constants";
+import { getContactJsonLd } from "../../lib/json-ld";
 import { createPageMetadata } from "../../lib/metadata";
 
 export const metadata = createPageMetadata({
@@ -9,5 +11,10 @@ export const metadata = createPageMetadata({
 });
 
 export default function ContactPage() {
-  return <ContactForm />;
+  return (
+    <>
+      <JsonLd data={getContactJsonLd()} />
+      <ContactForm />
+    </>
+  );
 }

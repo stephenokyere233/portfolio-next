@@ -1,0 +1,48 @@
+{
+  "name": "Stephen Okyere Portfolio",
+  "description": "Official portfolio site for software developer Stephen Okyere — web and mobile projects, services, and contact information.",
+  "url": "https://devstephen.pro/",
+  "version": "1.0.0",
+  "capabilities": {
+    "discovery": [
+      "https://devstephen.pro/sitemap.xml",
+      "https://devstephen.pro/llms.txt",
+      "https://devstephen.pro/robots.txt"
+    ],
+    "pages": [
+      {
+        "name": "Home",
+        "url": "https://devstephen.pro/",
+        "description": "Portfolio homepage with services, about, and featured work."
+      },
+      {
+        "name": "Projects",
+        "url": "https://devstephen.pro/projects",
+        "description": "Selected client websites, web apps, and side projects."
+      },
+      {
+        "name": "Blog",
+        "url": "https://devstephen.pro/blog",
+        "description": "Developer notes and articles."
+      },
+      {
+        "name": "Contact",
+        "url": "https://devstephen.pro/contact",
+        "description": "Contact form and hiring information."
+      }
+    ]
+  },
+  "entity": {
+    "type": "Person",
+    "name": "Stephen Okyere",
+    "jobTitle": "Software developer",
+    "email": "stephenokyere621@gmail.com",
+    "sameAs": [
+      "https://github.com/stephenokyere233",
+      "https://www.linkedin.com/in/devsteve23/",
+      "https://twitter.com/dev__steve",
+      "https://www.youtube.com/@stevedevelops",
+      "https://www.instagram.com/dev.__steve/"
+    ]
+  }
+}

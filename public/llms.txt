@@ -1,0 +1,72 @@
+# Stephen Okyere
+
+> Software developer Stephen Okyere builds fast web and mobile apps with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to contract work.
+
+Stephen Okyere is a freelance software developer focused on web and mobile products. This site is the primary source for portfolio work, services, and contact details.
+
+## Brands & projects
+
+Stephen has built websites and web apps for the following brands and projects (in portfolio order):
+
+- [Eldad Nutakor](https://eldadnutakor.com/): Eldad Nutakor coaches leaders through consulting, storytelling, and leadership development
+- [Oxegene](https://www.oxegene.com/): Venture and innovation firm building ideas, companies, and culture across Africa
+- [MG Creatives](https://mgcreatives.co.uk/): Creative agency for design, digital experiences, and storytelling
+- [dEX Ghana](https://dexghana.org/): Accra design foundation building community, programmes, and platforms for African designers
+- [Marafiq](https://marafiqgh.com/): Facility management company bringing purpose and performance to every property
+- [Crux Global](https://www.cruxmusic.global/): Music distribution platform for independent artists
+- [P&O Convenience](https://www.pharmandorganic.com/): E-pharmacy and organic marketplace for healthcare in Ghana
+- [Web3 Nigeria Blog](https://www.web3nigeria.org/): Web3 news, articles, and podcasts with live crypto price tracking
+- [Difudi](https://difudi.com/): Discover and save discounts from local businesses
+- [Reidad](https://reidad.vercel.app/): Real estate platform to search property listings for sale and rent
+- [Oarcoin](https://www.oarcoin.org/): Community-powered open digital currency for everyday transactions
+- [Vyky](https://stories.vyky.co/): E-commerce for recovery kits built for travel and daily wellness
+- [Nigeria Blockchain Week](https://www.nigeriablockchainweek.org/): Event site for Nigeria's blockchain week with conferences, hackathons, and awards
+- [Velour](https://velour.vercel.app/): Digital wedding invitation with RSVP tracking and event details
+- [No Ordinary Techie](https://not-www.vercel.app/): Community platform for techies to connect, learn, and grow
+- [Yeb Gallery](https://yebgallery.com/): Online gallery for contemporary art
+- [Bryllupslisten](https://bryllupslisten.no/): Norwegian wedding wishlist registry linked to top retailers
+- [Prisem Medical](https://prisem-www.vercel.app/): Medical supplies company transforming healthcare delivery across Ghana
+- [Degen Tribe](https://degentribe.com/): Onchain community forum building the largest degen tribe on the web
+- [Macel Care Limited](https://macelcare.com/): Healthcare site for booking appointments and joining the care team
+- [Openwaver](https://openwaver.com/): Web3 studio building blockchain solutions and dApp infrastructure
+- [Bithub Inc.](https://bithubinc.com/): Remote talent marketplace for hiring vetted developers from $12/hr
+- [Fifth Avenue Apartments](https://www.fifthavenueluxuryapartments.com/): Luxury executive apartment bookings tailored to your comfort
+- [Kobby's Apartments](https://kobbysapartments.vercel.app/): Lodge and short-stay apartment site with booking and property tours
+- [Ton Summit](https://www.tonsummit.org/): Landing page for the TON ecosystem's flagship developer summit
+- [Web3 Nigeria](https://www.web3nigeria.org/): Community hub connecting 5,000+ members across Nigeria's Web3 ecosystem
+- [Chain 2055](https://chain2055.com/): Registration site for the Solana Summer Global Meetup on blockchain
+- [Tigerians NFT](https://tigerians.io/): Art-focused NFT community exploring use cases for the Tigerians IP
+- [Trailers Home](https://palmflix.ce055.web.app/): Browse films and watch trailers
+- [Rogue Reports](https://roguereports.vercel.app/): Independent journalism and newsletter
+- [Palmplayy](https://palmplayy.vercel.app/): Music streaming app to discover artists, charts, and new tracks
+- [Palmstore](https://palmstore-next.vercel.app/): Turn Twitter threads into shareable images
+- [Be-Little](https://be-little.vercel.app/): Compress images without losing quality
+- [Waverpass](https://www.waverpass.com/): Mint a Waver Pass for exclusive access to Openwaver Web3 products
+- [Magna](https://www.buymagna.com/): Landing page for an NFT drop
+- [Snap-A-Shot](https://snap-a-shot.vercel.app/): Save Twitter threads as images
+
+## Core pages
+
+- [Home](https://devstephen.pro/): Portfolio homepage with intro, services, about, and featured projects.
+- [Projects](https://devstephen.pro/projects): Full list of client websites, web apps, and side projects.
+- [Blog](https://devstephen.pro/blog): Developer notes on React, Next.js, Vue, Nuxt, Flutter, and React Native.
+- [Contact](https://devstephen.pro/contact): Hire Stephen for web development, mobile development, UI work, and consulting.
+
+## Services
+
+- Web development with React, Next.js, Vue, and Nuxt
+- Mobile development with Flutter and React Native
+- UI/UX design for landing pages, dashboards, and product flows
+- Performance, debugging, and architecture problem solving
+
+## Contact
+
+- Email: stephenokyere621@gmail.com
+- GitHub: https://github.com/stephenokyere233
+- LinkedIn: https://www.linkedin.com/in/devsteve23/
+- Twitter: https://twitter.com/dev__steve
+
+## Optional
+
+- [Sitemap](https://devstephen.pro/sitemap.xml): Machine-readable list of public pages.
+- [Agent card](https://devstephen.pro/.well-known/agent-card.json): Structured site metadata for AI agents.
