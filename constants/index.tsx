@@ -32,6 +32,7 @@ export const SITE = {
     "I'm Stephen Okyere — a software developer building with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to freelance and contract work.",
   heroIntro:
     "I build products that feel fast and look polished — from web apps with React, Next.js, Vue, and Nuxt to mobile with Flutter and React Native.",
+  aboutIntro: "How I got into development, and what I bring to a project.",
   aboutFocus:
     "Most days I'm shipping software across platforms. I care about clean code, interfaces that make sense, and work that holds up once real people use it.",
   footerTagline: "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
@@ -169,6 +170,12 @@ export const PROJECTS = [
     imgSrc: "/projects/velour.png",
     desc: "Digital wedding invitation with RSVP tracking and event details",
     siteLink: "https://velour.vercel.app/",
+  },
+  {
+    name: "No Ordinary Techie",
+    imgSrc: "/projects/no-ordinary-techie.png",
+    desc: "Community platform for techies to connect, learn, and grow",
+    siteLink: "https://not-www.vercel.app/",
   },
   {
     name: "Yeb Gallery",

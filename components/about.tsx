@@ -4,15 +4,18 @@ import { SITE } from "../constants";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 scroll-mt-24">
+    <section id="about" className="py-24 scroll-mt-24 border-t border-white/[0.06]">
       <WidthConstraint>
         <Title label="About Me" />
-        <div className="max-w-2xl space-y-5 mt-6">
-          <p className="text-[17px] text-white/75 leading-relaxed">
-            I came to programming later than most people do, but it stuck — fast. I learn
-            by building things, and I try to ship something new whenever I can.
+        <p className="text-[17px] text-white/70 leading-relaxed max-w-2xl mt-4">
+          {SITE.aboutIntro}
+        </p>
+        <div className="max-w-2xl space-y-5 mt-8">
+          <p className="text-[17px] text-white/70 leading-relaxed">
+            I came to programming later than most people do, but it stuck fast. I learn by
+            building things, and I try to ship something new whenever I can.
           </p>
-          <p className="text-[17px] text-white/75 leading-relaxed">{SITE.aboutFocus}</p>
+          <p className="text-[17px] text-white/70 leading-relaxed">{SITE.aboutFocus}</p>
         </div>
       </WidthConstraint>
     </section>
