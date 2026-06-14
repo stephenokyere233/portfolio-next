@@ -11,7 +11,10 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 16);
+      setMenuOpen((open) => (open ? false : open));
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -21,13 +24,6 @@ const Header = () => {
     router.events.on("routeChangeComplete", closeMenu);
     return () => router.events.off("routeChangeComplete", closeMenu);
   }, [router.events]);
-
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
 
   return (
     <header
