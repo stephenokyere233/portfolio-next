@@ -59,7 +59,7 @@ const Header = () => {
           </nav>
 
           <Link
-            href="/resume.pdf"
+            href="/resume/2026.pdf"
             className="hidden sm:inline-block gradient-border-button text-sm font-semibold"
           >
             Download CV
@@ -102,7 +102,7 @@ const Header = () => {
             </Link>
           ))}
           <Link
-            href="/resume.pdf"
+            href="/resume/2026.pdf"
             onClick={() => setMenuOpen(false)}
             className="gradient-border-button text-sm font-semibold w-max mt-2"
           >

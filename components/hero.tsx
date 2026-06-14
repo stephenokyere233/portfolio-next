@@ -36,7 +36,7 @@ const Hero = () => {
                   lineHeight: 1.05,
                 }}
               >
-                {firstName} <span className="text-brand-start">{lastName}</span>
+                {firstName} {lastName}
               </h1>
               <p
                 className="text-white/55 font-medium mt-4 sm:mt-5"
@@ -65,7 +65,7 @@ const Hero = () => {
                   Get in Touch &rarr;
                 </Link>
                 <Link
-                  href="/resume.pdf"
+                  href="/resume/2026.pdf"
                   className="text-sm text-white/60 hover:text-white link transition-colors duration-200 py-2"
                 >
                   Download CV

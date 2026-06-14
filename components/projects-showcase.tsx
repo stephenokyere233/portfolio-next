@@ -62,7 +62,7 @@ export default function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
   return (
     <div className="border-t border-border">
       <div className="relative lg:grid lg:grid-cols-2">
-        <div className="flex flex-col lg:pr-10 xl:pr-12 lg:border-r lg:border-border">
+        <div className="flex flex-col lg:border-r lg:border-border">
           {projects.map((project, index) => (
             <article
               key={project.name}

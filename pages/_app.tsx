@@ -1,3 +1,4 @@
+import FAB from "@/fab";
 import Footer from "@/footer";
 import Header from "@/header";
 import { Analytics } from "@vercel/analytics/react";
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <Analytics />
+      <FAB />
       <Header />
       <main>
         <Component {...pageProps} />

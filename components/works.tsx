@@ -19,7 +19,7 @@ const Projects = () => {
         </p>
         <ProjectsShowcase projects={displayed} />
         {hasMore && (
-          <div className="mt-16 lg:mt-20 pt-10 border-t border-border text-center">
+          <div className="pt-10 border-t border-border text-center">
             <Link href="/projects" className="btn-secondary text-sm inline-block">
               View all projects
             </Link>

@@ -7,25 +7,19 @@ import { CONTACTS, SITE } from "../constants";
 const FooterBanner = () => {
   return (
     <div className="box-surface relative overflow-hidden my-20">
-      <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bg" />
-      <div className="px-6 py-16 md:py-20 md:px-12 flex flex-col items-center text-center gap-6">
+      <div className="absolute top-0 left-0 right-0 h-[2px] gradient-bg" />
+      <div className="px-8 py-14 md:px-12 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-12">
         <h2
-          className="font-semibold leading-tight"
-          style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+          className="font-bold tracking-[-0.03em] leading-[1.1] text-white"
+          style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
         >
-          Want to build
-          <br />
-          <span className="gradient-text">something cool?</span>
+          Got something to ship?
         </h2>
-        <p className="text-white/60 text-[15px] max-w-md">
-          Building something on web or mobile? Tell me what you&apos;re working on —
-          I&apos;d love to hear about it.
-        </p>
         <Link
           href="mailto:stephenokyere621@gmail.com"
-          className="btn-secondary text-[15px] inline-block"
+          className="link text-[15px] text-white/70 hover:text-white transition-colors shrink-0"
         >
-          stephenokyere621@gmail.com
+          stephenokyere621@gmail.com &rarr;
         </Link>
       </div>
     </div>
@@ -95,10 +89,7 @@ const Footer = () => {
           </section>
         </WidthConstraint>
         <WidthConstraint className="flex flex-col sm:flex-row items-center justify-between gap-4 py-5 border-t border-border text-sm text-muted">
-          <span>
-            Copyright &copy; {new Date().getFullYear()} |{" "}
-            <span className="gradient-text">My Portfolio</span>
-          </span>
+          <span>Copyright &copy; {new Date().getFullYear()} </span>
           <span>
             Designed by{" "}
             <Link
