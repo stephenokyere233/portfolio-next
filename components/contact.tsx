@@ -3,17 +3,20 @@ import { CONTACTS } from "../constants";
 
 const Contact = () => {
   return (
-    <section id="contact" className=" w-full min-h-[85vh]  py-10 ">
-      <h2 className="font-[500] text-5xl pb-6">Let&apos;s Link Up</h2>
-      <div className="flex flex-wrap gap-8 my-10 px-4 ">
-        {CONTACTS.map((contact) => {
-          const { link, color } = contact;
-          return (
-            <Link key={link} href={link} className={`text-5xl ${color}`}>
-              <contact.icon />
-            </Link>
-          );
-        })}
+    <section id="contact" className="w-full min-h-[85vh] py-10">
+      <h2 className="text-3xl font-semibold gradient-text mb-8">Get in touch</h2>
+      <div className="flex flex-wrap gap-6 my-10">
+        {CONTACTS.map((contact) => (
+          <Link
+            key={contact.link}
+            href={contact.link}
+            target={contact.link.startsWith("http") ? "_blank" : undefined}
+            rel={contact.link.startsWith("http") ? "noopener noreferrer" : undefined}
+            className="text-4xl text-muted hover:text-white transition-colors duration-200"
+          >
+            <contact.icon />
+          </Link>
+        ))}
       </div>
     </section>
   );

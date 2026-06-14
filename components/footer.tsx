@@ -1,94 +1,115 @@
-"use client";
-import Link from "next/link";
-import React from "react";
 import Logo from "@/logo";
-import { CONTACTS } from "../constants";
 import WidthConstraint from "@/width-constraint";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { CONTACTS, SITE } from "../constants";
 
 const FooterBanner = () => {
   return (
-    <div
-      style={{ background: "rgba(169, 169, 169, 0.2)" }}
-      className="mx-auto max-w-6xl h-[350px]  md:h-[400px] rounded-lg flex text-center  gap-4 items-center justify-center flex-col my-20"
-    >
-      <h2 className="text-[2.5em] md:text-[5em] font-semibold md:leading-[80px] ">
-        Want to build <br /> something cool?
-      </h2>
-      <button className="bg-[#222] rounded-[30px] p-2 px-6">
-        <Link href="mailto:stephenokyere621@gmail.com">stephenokyere621@gmail.com</Link>
-      </button>
+    <div className="box-surface relative overflow-hidden my-20">
+      <div className="absolute top-0 left-0 right-0 h-[3px] gradient-bg" />
+      <div className="px-6 py-16 md:py-20 md:px-12 flex flex-col items-center text-center gap-6">
+        <h2
+          className="font-semibold leading-tight"
+          style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+        >
+          Want to build
+          <br />
+          <span className="gradient-text">something cool?</span>
+        </h2>
+        <p className="text-white/60 text-[15px] max-w-md">
+          Building something on web or mobile? Tell me what you&apos;re working on —
+          I&apos;d love to hear about it.
+        </p>
+        <Link
+          href="mailto:stephenokyere621@gmail.com"
+          className="btn-secondary text-[15px] inline-block"
+        >
+          stephenokyere621@gmail.com
+        </Link>
+      </div>
     </div>
   );
 };
 
 const Footer = () => {
   const pathname = usePathname();
+
   return (
-    <footer className="pt-6 space-y-10  text-[18px] md:text-xl">
+    <footer className="pt-6">
       {pathname !== "/blog" && (
         <WidthConstraint>
           <FooterBanner />
         </WidthConstraint>
       )}
-      <WidthConstraint className="mx-auto grid h-full min-h-[200px]  justify-between gap-6 px-4 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-0">
-        <section className={"flex lg:items-center flex-col"}>
-          <div className="flex-1">
+      <div className="border-t border-border">
+        <WidthConstraint className="grid gap-10 py-12 md:grid-cols-3">
+          <section>
             <div className="w-[150px] mb-4">
               <Logo />
             </div>
-            <p className="my-4">Want to build something cool?</p>
-            <div className="flex gap-6 pb-4">
-              {CONTACTS.map((contact, index) => {
-                return (
-                  <Link key={index} href={contact.link}>
-                    <contact.icon size={28} />
-                  </Link>
-                );
-              })}
+            <p className="text-white/60 text-[15px] mb-5">{SITE.footerTagline}</p>
+            <div className="flex gap-5">
+              {CONTACTS.map((contact, index) => (
+                <Link
+                  key={index}
+                  href={contact.link}
+                  target={contact.link.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    contact.link.startsWith("http") ? "noopener noreferrer" : undefined
+                  }
+                  className="text-muted hover:text-white transition-colors duration-200"
+                  aria-label={contact.link}
+                >
+                  <contact.icon size={18} />
+                </Link>
+              ))}
             </div>
-            <p className="mt-4">
-              <Link href="mailto:stephenokyere621@gmail.com">
-                stephenokyere621@gmail.com
-              </Link>
-            </p>
-          </div>
-        </section>
-        <section className="flex flex-col">
-          <div className="lg:mx-auto lg:w-[200px]">
-            <h3 className="text-xl font-medium uppercase tracking-wider gradient-text">
+          </section>
+          <section>
+            <h3 className="text-sm font-semibold uppercase tracking-wider gradient-text mb-4">
               Quick links
             </h3>
-            <div className="mt-4 flex flex-col gap-3 capitalize">
-              <Link href="/#about">About</Link>
-              <Link href="/contact">Services</Link>
-              <Link href="/#projects">Projects</Link>
+            <div className="flex flex-col gap-3 text-[15px] text-white/70">
+              <Link href="/#about" className="hover:text-white transition-colors">
+                About
+              </Link>
+              <Link href="/projects" className="hover:text-white transition-colors">
+                Projects
+              </Link>
+              <Link href="/contact" className="hover:text-white transition-colors">
+                Contact
+              </Link>
             </div>
-          </div>
-        </section>
-        <section className="flex lg:items-center flex-col">
-          <div className="lg:mx-auto lg:w-[200px]">
-            <h3 className="text-xl font-medium uppercase tracking-wider gradient-text">
-              important links
+          </section>
+          <section>
+            <h3 className="text-sm font-semibold uppercase tracking-wider gradient-text mb-4">
+              Contact
             </h3>
-            <div className="mt-4 flex flex-col gap-3 capitalize">
-              <Link href="/contact">Contact</Link>
-            </div>
-          </div>
-        </section>
-      </WidthConstraint>
-      <WidthConstraint className="sm:text-md flex-col md:flex-row  gap-4 flex items-start py-5 md:items-center justify-center md:justify-between border-t text-sm border-gray-500 md:text-lg lg:text-xl">
-        <span>
-          Copyright © {new Date().getFullYear()} |{" "}
-          <span className="gradient-text">My PortFolio</span>
-        </span>
-        <span>
-          Designed By{" "}
-          <Link href="https://twitter.com/dev__steve" className="gradient-text">
-            dev_steve
-          </Link>
-        </span>
-      </WidthConstraint>
+            <Link
+              href="mailto:stephenokyere621@gmail.com"
+              className="text-[15px] text-white/70 hover:text-white transition-colors"
+            >
+              stephenokyere621@gmail.com
+            </Link>
+          </section>
+        </WidthConstraint>
+        <WidthConstraint className="flex flex-col sm:flex-row items-center justify-between gap-4 py-5 border-t border-border text-sm text-muted">
+          <span>
+            Copyright &copy; {new Date().getFullYear()} |{" "}
+            <span className="gradient-text">My Portfolio</span>
+          </span>
+          <span>
+            Designed by{" "}
+            <Link
+              href="https://twitter.com/dev__steve"
+              className="gradient-text hover:opacity-80 transition-opacity"
+            >
+              dev_steve
+            </Link>
+          </span>
+        </WidthConstraint>
+      </div>
     </footer>
   );
 };

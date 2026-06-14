@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
-const nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -26,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: "Email sent successfully!" });
-    } catch (error) {
+    } catch {
       res.status(500).json({ error: "An error occurred while sending the email." });
     }
   } else {

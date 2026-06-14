@@ -2,12 +2,17 @@ import React from "react";
 
 const ComingSoon = () => {
   return (
-    <h1
-      style={{ background: "rgba(169, 169, 169, 0.2)" }}
-      className="text-[3em] md:text-[5em] font-bold px-6 md:px-20  py-20 rounded-lg"
-    >
-      Coming Soon!
-    </h1>
+    <div className="box-surface px-8 py-16 md:px-20 md:py-24 text-center">
+      <h1
+        className="font-bold gradient-text"
+        style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
+      >
+        Coming Soon
+      </h1>
+      <p className="text-white/60 text-[15px] mt-4">
+        Still putting this together. Check back soon.
+      </p>
+    </div>
   );
 };
 

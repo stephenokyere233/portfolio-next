@@ -1,20 +1,19 @@
-import React from "react";
 import Title from "@/title";
 import WidthConstraint from "@/width-constraint";
+import { SITE } from "../constants";
 
 const About = () => {
   return (
-    <section id="about" className=" w-full mb-20 py-10 snap-y scroll-mt-[6em]">
+    <section id="about" className="py-24 scroll-mt-24">
       <WidthConstraint>
         <Title label="About Me" />
-        <p className="align-justify text-[18px] leading-[1.8em]  md:leading-[2em] md:text-xl ">
-          Tech is one thing I&apos;m very passionate about,I love to learn new stuff. I
-          was a bit late to programming tho buh I&apos;m doing my best and I try to
-          document my progress everyday by building new stuff. I craft stunning, intuitive
-          websites and mobile apps that deliver exceptional user experiences. Turning your
-          vision into reality on the web, one pixel at a time.
-          <br />
-        </p>
+        <div className="max-w-2xl space-y-5 mt-6">
+          <p className="text-[17px] text-white/75 leading-relaxed">
+            I came to programming later than most people do, but it stuck — fast. I learn
+            by building things, and I try to ship something new whenever I can.
+          </p>
+          <p className="text-[17px] text-white/75 leading-relaxed">{SITE.aboutFocus}</p>
+        </div>
       </WidthConstraint>
     </section>
   );

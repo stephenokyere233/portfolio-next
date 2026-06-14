@@ -1,18 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  font-family: "Space Grotesk", sans-serif;
-  background: red;
+html {
+  scroll-behavior: smooth;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+body {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: rgba(71, 118, 230, 0.35);
+  color: #ffffff;
 }
 
 .title {
@@ -29,16 +30,9 @@ body::-webkit-scrollbar {
   left: 0;
   width: 30%;
   height: 3px;
-  background: blueviolet;
+  background: #8e54e9;
 }
 
-.gradient-border-button {
-  border: 3px solid;
-  border-image: radial-gradient(circle, #4776e6, #8e54e9);
-  border-image-slice: 1;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
 .gradient-text {
   background: linear-gradient(to right, #4776e6, #8e54e9);
   background-clip: text;
@@ -50,18 +44,151 @@ body::-webkit-scrollbar {
   background: linear-gradient(to right, #4776e6, #8e54e9);
 }
 
+.gradient-border-button {
+  border: 2px solid transparent;
+  background: linear-gradient(#222222, #222222) padding-box,
+    linear-gradient(to right, #4776e6, #8e54e9) border-box;
+  padding: 10px 20px;
+  border-radius: 0;
+}
+
 .navlink {
   background-image: linear-gradient(to right, #4776e6, #8e54e9);
   background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 100% 3px; /* 3px is the height of the border */
-  transition: background-size 0.3s ease-in-out;
+  background-size: 100% 2px;
 }
 
 .link:hover {
   background-image: linear-gradient(to right, #4776e6, #8e54e9);
   background-position: 0 100%;
   background-repeat: no-repeat;
-  background-size: 100% 3px; /* 3px is the height of the border */
-  transition: background-size 0.3s ease-in-out;
+  background-size: 100% 2px;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #4776e6, #8e54e9);
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-secondary {
+  background: rgba(169, 169, 169, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 0;
+  transition: border-color 0.2s ease-out;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.box-surface {
+  background: rgba(169, 169, 169, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(169, 169, 169, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 15px;
+  transition: border-color 0.2s ease-out;
+}
+
+.input-box::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.input-box:focus {
+  outline: none;
+  border-color: rgba(142, 84, 233, 0.6);
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: hero-rise 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-rise-1 {
+  animation-delay: 0.05s;
+}
+.hero-rise-2 {
+  animation-delay: 0.12s;
+}
+.hero-rise-3 {
+  animation-delay: 0.2s;
+}
+.hero-rise-4 {
+  animation-delay: 0.28s;
+}
+.hero-rise-5 {
+  animation-delay: 0.36s;
+}
+.hero-rise-6 {
+  animation-delay: 0.44s;
+}
+
+.hero-float {
+  animation: hero-float 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.hero-float-delay {
+  animation-delay: -2.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-rise {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .hero-float {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

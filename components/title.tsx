@@ -5,7 +5,11 @@ interface ITitle {
 }
 
 const Title = ({ label }: ITitle) => {
-  return <h2 className="title w-max px-2 mb-3 font-semibold text-4xl">{label}</h2>;
+  return (
+    <h2 className="title w-max px-2 mb-3 font-semibold text-3xl md:text-4xl">
+      {label}
+    </h2>
+  );
 };
 
 export default Title;
