@@ -1,12 +1,93 @@
+"use client";
+
 import Logo from "@/logo";
 import WidthConstraint from "@/width-constraint";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ROUTES } from "../constants";
 
+function useHash() {
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash);
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
+
+  return hash;
+}
+
+function MobileNavButton({ onOpenChange }: { onOpenChange: (open: boolean) => void }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    onOpenChange(menuOpen);
+  }, [menuOpen, onOpenChange]);
+
+  return (
+    <button
+      onClick={() => setMenuOpen(!menuOpen)}
+      className="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8"
+      aria-label={menuOpen ? "Close menu" : "Open menu"}
+      aria-expanded={menuOpen}
+    >
+      <span
+        className={`block w-[18px] h-px bg-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center ${
+          menuOpen ? "rotate-45 translate-y-[3px]" : ""
+        }`}
+      />
+      <span
+        className={`block w-[18px] h-px bg-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center ${
+          menuOpen ? "-rotate-45 -translate-y-[3px]" : ""
+        }`}
+      />
+    </button>
+  );
+}
+
+function MobileNavPanel({
+  menuOpen,
+  onClose,
+}: {
+  menuOpen: boolean;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className={`absolute top-16 left-0 right-0 bg-page border-b border-border md:hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
+        menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-transparent"
+      }`}
+    >
+      <nav className="flex flex-col px-5 py-6 gap-4">
+        {ROUTES.map((route) => (
+          <Link
+            key={route.name}
+            href={route.pathname}
+            onClick={onClose}
+            className="text-lg text-white/80 hover:text-white transition-colors"
+          >
+            {route.name}
+          </Link>
+        ))}
+        <Link
+          href="/resume/2026.pdf"
+          onClick={onClose}
+          className="gradient-border-button text-sm font-semibold w-max mt-2"
+        >
+          Download CV
+        </Link>
+      </nav>
+    </div>
+  );
+}
+
 const Header = () => {
-  const router = useRouter();
+  const pathname = usePathname();
+  const hash = useHash();
+  const navKey = `${pathname}${hash}`;
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,11 +100,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const closeMenu = () => setMenuOpen(false);
-    router.events.on("routeChangeComplete", closeMenu);
-    return () => router.events.off("routeChangeComplete", closeMenu);
-  }, [router.events]);
+  const isRouteActive = (routePathname: string) => {
+    if (routePathname.startsWith("/#")) {
+      return pathname === "/" && hash === routePathname.slice(1);
+    }
+    return pathname === routePathname;
+  };
 
   return (
     <header
@@ -39,11 +121,7 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <nav className="hidden md:flex items-center gap-8">
             {ROUTES.map((route) => {
-              const isActive =
-                router.asPath === route.pathname ||
-                (route.pathname.startsWith("/#") &&
-                  router.pathname === "/" &&
-                  router.asPath.includes(route.pathname.slice(1)));
+              const isActive = isRouteActive(route.pathname);
 
               return (
                 <div className={isActive ? "navlink" : "link"} key={route.name}>
@@ -65,51 +143,15 @@ const Header = () => {
             Download CV
           </Link>
 
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col justify-center items-center gap-[5px] w-8 h-8"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-          >
-            <span
-              className={`block w-[18px] h-px bg-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center ${
-                menuOpen ? "rotate-45 translate-y-[3px]" : ""
-              }`}
-            />
-            <span
-              className={`block w-[18px] h-px bg-white transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] origin-center ${
-                menuOpen ? "-rotate-45 -translate-y-[3px]" : ""
-              }`}
-            />
-          </button>
+          <MobileNavButton key={navKey} onOpenChange={setMenuOpen} />
         </div>
       </WidthConstraint>
 
-      <div
-        className={`absolute top-16 left-0 right-0 bg-page border-b border-border md:hidden transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] overflow-hidden ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-transparent"
-        }`}
-      >
-        <nav className="flex flex-col px-5 py-6 gap-4">
-          {ROUTES.map((route) => (
-            <Link
-              key={route.name}
-              href={route.pathname}
-              onClick={() => setMenuOpen(false)}
-              className="text-lg text-white/80 hover:text-white transition-colors"
-            >
-              {route.name}
-            </Link>
-          ))}
-          <Link
-            href="/resume/2026.pdf"
-            onClick={() => setMenuOpen(false)}
-            className="gradient-border-button text-sm font-semibold w-max mt-2"
-          >
-            Download CV
-          </Link>
-        </nav>
-      </div>
+      <MobileNavPanel
+        key={navKey}
+        menuOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
     </header>
   );
 };

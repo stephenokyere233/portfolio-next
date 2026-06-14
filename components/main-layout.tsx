@@ -1,21 +1,14 @@
+"use client";
+
 import FAB from "@/fab";
 import Footer from "@/footer";
 import Header from "@/header";
 import { Analytics } from "@vercel/analytics/react";
-import type { AppProps } from "next/app";
-import { Onest } from "next/font/google";
 import { Toaster } from "sonner";
-import "../styles/globals.css";
 
-const onest = Onest({
-  subsets: ["latin"],
-  variable: "--font-onest",
-  display: "swap",
-});
-
-export default function App({ Component, pageProps }: AppProps) {
+export default function MainLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${onest.variable} font-sans`}>
+    <>
       <Toaster
         toastOptions={{
           style: {
@@ -30,10 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Analytics />
       <FAB />
       <Header />
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 }

@@ -24,21 +24,22 @@ import { TbBrandNextjs } from "react-icons/tb";
 
 export const SITE = {
   name: "Stephen Okyere",
-  url: "https://devsteve.pro/",
-  role: "Web & Mobile Developer",
-  title: "Stephen Okyere — Web & Mobile Developer",
+  url: "https://devstephen.pro/",
+  email: "stephenokyere621@gmail.com",
+  role: "Software developer",
+  title: "Stephen Okyere — Software developer",
   description:
-    "I'm Stephen Okyere — I build web and mobile apps with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to freelance and contract work.",
+    "I'm Stephen Okyere — a software developer building with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to freelance and contract work.",
   heroIntro:
-    "I build products that feel fast and look polished — on the web with React, Next.js, Vue, and Nuxt, and on mobile with Flutter and React Native.",
+    "I build products that feel fast and look polished — from web apps with React, Next.js, Vue, and Nuxt to mobile with Flutter and React Native.",
   aboutFocus:
-    "Most days I'm jumping between web and mobile. I care about clean code, interfaces that make sense, and shipping work that holds up once real people use it.",
+    "Most days I'm shipping software across platforms. I care about clean code, interfaces that make sense, and work that holds up once real people use it.",
   footerTagline:
-    "Web and mobile developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
+    "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
   worksIntro: "A mix of client work and side projects. Here's some of what I've shipped.",
   contactIntro:
-    "Need a developer for a web or mobile project? I work with React, Next.js, Vue, Nuxt, Flutter, and React Native. Send a message and let's talk.",
-  blogDescription: "Notes on building for the web and mobile. More posts coming soon.",
+    "Need a software developer for your next project? I work with React, Next.js, Vue, Nuxt, Flutter, and React Native. Send a message and let's talk.",
+  blogDescription: "Notes on building software. More posts coming soon.",
 } as const;
 
 export const PROJECTS = [
@@ -229,7 +230,7 @@ export const SERVICES = [
   {
     title: "Problem Solving",
     description:
-      "Stuck on a bug, a slow page, or a messy architecture? I like digging into hard problems on web and mobile.",
+      "Stuck on a bug, a slow page, or a messy architecture? I like digging into hard problems across the stack.",
   },
 ];
 

@@ -8,7 +8,7 @@ const WhatIDo = () => {
       <WidthConstraint>
         <Title label="What I Do" />
         <p className="text-[17px] text-white/70 leading-relaxed max-w-2xl mt-4">
-          Four areas where I spend most of my time building for web and mobile.
+          Four areas where I spend most of my time as a software developer.
         </p>
 
         <ul className="mt-12 md:mt-14 grid md:grid-cols-2 md:gap-x-16 lg:gap-x-20">
