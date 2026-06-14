@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PROJECTS } from "../constants";
 
-const HERO_PROJECTS = [PROJECTS[0], PROJECTS[1], PROJECTS[3], PROJECTS[6]] as const;
+const HERO_PROJECTS = [PROJECTS[0], PROJECTS[1], PROJECTS[2], PROJECTS[3]] as const;
 
 type HeroProject = (typeof HERO_PROJECTS)[number];
 
@@ -64,10 +64,7 @@ function ProjectTile({ project }: { project: HeroProject }) {
 
 const HeroVisual = () => {
   return (
-    <div
-      className="relative w-full aspect-square"
-      aria-label="Featured projects"
-    >
+    <div className="relative w-full aspect-square" aria-label="Featured projects">
       {TILES.map((tile) => (
         <div key={tile.project.name} className={`absolute ${tile.wrapperClass}`}>
           <div

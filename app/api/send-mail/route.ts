@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { isBlockedEmail } from "../../../lib/email-validation";
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -13,7 +14,12 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: NextRequest) {
-  const { message, subject } = await request.json();
+  const { message, subject, email } = await request.json();
+
+  if (!email || typeof email !== "string" || isBlockedEmail(email)) {
+    return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
+  }
+
   const mailOptions = {
     from: "Portfolio<thuqpalmer@gmail.com>",
     to: "stephenokyere621@gmail.com",

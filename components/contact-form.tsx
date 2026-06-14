@@ -5,6 +5,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { PiSpinner } from "react-icons/pi";
 import { toast } from "sonner";
 import { SITE } from "../constants";
+import { isBlockedEmail } from "../lib/email-validation";
 
 interface FormData {
   name: string;
@@ -30,7 +31,14 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent, values: FormData) => {
     e.preventDefault();
+
+    if (isBlockedEmail(values.email)) {
+      toast.error("Please use a valid email address.");
+      return;
+    }
+
     const emailData = {
+      email: values.email,
       subject: `${values.name} reached out!`,
       message: `Hello,\n\nA new contact from your portfolio.\n\nName: ${values.name}\nEmail: ${values.email}\nLocation: ${values.location}\nMessage: ${values.message}`,
     };
