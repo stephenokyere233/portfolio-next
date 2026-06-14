@@ -4,7 +4,7 @@ import { createPageMetadata } from "../../lib/metadata";
 
 export const metadata = createPageMetadata({
   title: `Contact — ${SITE.name}`,
-  description: `Reach out to ${SITE.name} about software development.`,
+  description: SITE.contactIntro,
   path: "contact",
 });
 

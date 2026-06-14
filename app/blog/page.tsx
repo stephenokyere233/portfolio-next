@@ -19,10 +19,7 @@ export default function BlogPage() {
           >
             Coming Soon
           </h1>
-          <p className="text-white/60 text-[15px] mt-4">
-            I&apos;m writing. Expect posts on React, Next.js, Vue, Nuxt, Flutter, and
-            React Native — check back soon.
-          </p>
+          <p className="text-white/60 text-[15px] mt-4">{SITE.blogDescription}</p>
         </div>
       </WidthConstraint>
     </div>

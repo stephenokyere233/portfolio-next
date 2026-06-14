@@ -81,7 +81,7 @@ export default function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                   src={project.imgSrc}
                   width={800}
                   height={600}
-                  alt={project.name}
+                  alt={`${project.name} — ${project.desc}`}
                   className="w-full aspect-[5/3] object-contain bg-white/5"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                 <Image
                   key={project.name}
                   src={project.imgSrc}
-                  alt={project.name}
+                  alt={`${project.name} — ${project.desc}`}
                   fill
                   sizes="50vw"
                   priority={index === 0}

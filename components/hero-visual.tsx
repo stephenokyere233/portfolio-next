@@ -44,12 +44,12 @@ function ProjectTile({ project }: { project: HeroProject }) {
       target="_blank"
       rel="noopener noreferrer"
       className="group block overflow-hidden border border-border bg-[#1c1c1c] shadow-[0_10px_28px_rgba(0,0,0,0.32)] transition-[border-color,box-shadow] duration-200 hover:border-border-strong hover:shadow-[0_14px_36px_rgba(0,0,0,0.4)]"
-      aria-label={`View ${project.name}`}
+      aria-label={`View ${project.name} project`}
     >
       <div className="relative aspect-[3/2] overflow-hidden">
         <Image
           src={project.imgSrc}
-          alt={project.name}
+          alt={`${project.name} — ${project.desc}`}
           fill
           sizes="(max-width: 640px) 45vw, (max-width: 1024px) 200px, 240px"
           className="object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.03]"

@@ -1,7 +1,8 @@
 "use client";
 
+import Title from "@/title";
 import WidthConstraint from "@/width-constraint";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, type ReactNode, useState } from "react";
 import { PiSpinner } from "react-icons/pi";
 import { toast } from "sonner";
 import { SITE } from "../constants";
@@ -12,6 +13,41 @@ interface FormData {
   email: string;
   location: string;
   message: string;
+}
+
+function RequiredMark() {
+  return (
+    <span className="text-[#8e54e9] ml-0.5" aria-hidden="true">
+      *
+    </span>
+  );
+}
+
+function FieldLabel({
+  htmlFor,
+  children,
+  required = false,
+  optional = false,
+}: {
+  htmlFor: string;
+  children: ReactNode;
+  required?: boolean;
+  optional?: boolean;
+}) {
+  return (
+    <label
+      htmlFor={htmlFor}
+      className="flex items-baseline justify-between gap-3 text-sm font-medium mb-2 text-white/90"
+    >
+      <span>
+        {children}
+        {required && <RequiredMark />}
+      </span>
+      {optional && (
+        <span className="text-xs font-normal text-white/35 shrink-0">Optional</span>
+      )}
+    </label>
+  );
 }
 
 export default function ContactForm() {
@@ -51,7 +87,7 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        toast.success("Got it — I'll reply as soon as I can.");
+        toast.success("Got it. I'll reply as soon as I can.");
         setFormData({ name: "", email: "", location: "", message: "" });
       } else {
         const errorMessage = await response.text();
@@ -67,46 +103,60 @@ export default function ContactForm() {
 
   return (
     <div className="min-h-[calc(100dvh-64px)] flex items-center pt-16">
-      <WidthConstraint className="w-full max-w-lg py-20">
-        <h1 className="text-3xl font-bold mb-2 uppercase tracking-wider gradient-text">
-          Hire Me
-        </h1>
-        <p className="text-white/60 text-[15px] mb-10">{SITE.contactIntro}</p>
-        <form className="space-y-5" onSubmit={(e) => handleSubmit(e, form)}>
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1.5">
-              Name / Company Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Your name or company"
-              className="input-box"
-              required
-            />
+      <WidthConstraint className="w-full max-w-xl py-16 sm:py-20">
+        <header className="mb-10 sm:mb-12">
+          <Title label="Get in touch" />
+          <p className="text-white/60 text-[15px] leading-relaxed max-w-lg mt-4">
+            {SITE.contactIntro}
+          </p>
+        </header>
+
+        <form
+          className="space-y-6"
+          onSubmit={(e) => handleSubmit(e, form)}
+          aria-describedby="contact-form-legend"
+        >
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-x-5">
+            <div>
+              <FieldLabel htmlFor="name" required>
+                Name / company
+              </FieldLabel>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your name or company"
+                className="input-box"
+                required
+                aria-required="true"
+                autoComplete="name"
+              />
+            </div>
+            <div>
+              <FieldLabel htmlFor="email" required>
+                Email
+              </FieldLabel>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="you@example.com"
+                className="input-box"
+                required
+                aria-required="true"
+                autoComplete="email"
+              />
+            </div>
           </div>
+
           <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1.5">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="you@example.com"
-              className="input-box"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="location" className="block text-sm font-medium mb-1.5">
+            <FieldLabel htmlFor="location" optional>
               Location
-            </label>
+            </FieldLabel>
             <input
               type="text"
               id="location"
@@ -115,30 +165,40 @@ export default function ContactForm() {
               onChange={handleChange}
               placeholder="City, country"
               className="input-box"
+              autoComplete="address-level2"
             />
           </div>
+
           <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1.5">
+            <FieldLabel htmlFor="message" required>
               Message
-            </label>
+            </FieldLabel>
             <textarea
               id="message"
               name="message"
-              rows={6}
+              rows={5}
               value={form.message}
               onChange={handleChange}
               placeholder="What's the project? Timeline, budget, anything helpful."
-              className="input-box resize-none"
+              className="input-box resize-none min-h-[140px]"
               required
+              aria-required="true"
             />
           </div>
-          <button
-            type="submit"
-            disabled={loading}
-            className="btn-primary w-[200px] flex items-center justify-center disabled:opacity-50"
-          >
-            {loading ? <PiSpinner className="animate-spin" size={18} /> : "Submit"}
-          </button>
+
+          <div className="pt-2">
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary w-full sm:w-auto sm:min-w-[180px] flex items-center justify-center disabled:opacity-50"
+            >
+              {loading ? (
+                <PiSpinner className="animate-spin" size={18} />
+              ) : (
+                "Send message"
+              )}
+            </button>
+          </div>
         </form>
       </WidthConstraint>
     </div>

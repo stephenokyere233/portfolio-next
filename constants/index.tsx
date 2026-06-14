@@ -27,19 +27,27 @@ export const SITE = {
   url: "https://devstephen.pro/",
   email: "stephenokyere621@gmail.com",
   role: "Software developer",
-  title: "Stephen Okyere — Software developer",
+  title: "Stephen Okyere | Software Developer — React, Next.js & Flutter",
   description:
-    "I'm Stephen Okyere — a software developer building with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to freelance and contract work.",
+    "Software developer Stephen Okyere builds fast web and mobile apps with React, Next.js, Vue, Nuxt, Flutter, and React Native. Open to contract work.",
   heroIntro:
-    "I build products that feel fast and look polished — from web apps with React, Next.js, Vue, and Nuxt to mobile with Flutter and React Native.",
-  aboutIntro: "How I got into development, and what I bring to a project.",
+    "I build web and mobile products that load fast and feel polished — React, Next.js, Vue, and Nuxt on the web; Flutter and React Native on mobile.",
+  aboutIntro:
+    "Web and mobile developer. A bit about how I got here and what I bring to a project.",
+  aboutStory:
+    "I came to programming later than most people do, but it stuck fast. I learn by building things, and I try to ship something new whenever I can.",
   aboutFocus:
-    "Most days I'm shipping software across platforms. I care about clean code, interfaces that make sense, and work that holds up once real people use it.",
-  footerTagline: "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
-  worksIntro: "A mix of client work and side projects. Here's some of what I've shipped.",
+    "Most days I'm shipping across platforms — web apps, mobile builds, the occasional side project. I care about clean code, interfaces that make sense, and work that holds up when real people use it.",
+  footerTagline:
+    "Software developer. React, Next.js, Vue, Nuxt, Flutter, React Native.",
+  worksIntro:
+    "Client websites, web apps, and side projects — a selection of what I've built and shipped.",
   contactIntro:
-    "Need a software developer for your next project? I work with React, Next.js, Vue, Nuxt, Flutter, and React Native. Send a message and let's talk.",
-  blogDescription: "Notes on building software. More posts coming soon.",
+    "Hiring a developer for your next project? I work with React, Next.js, Vue, Nuxt, Flutter, and React Native. Send a message — happy to talk scope, timeline, and fit.",
+  blogDescription:
+    "Notes on React, Next.js, Vue, Nuxt, Flutter, and React Native — from someone who builds with them daily. New posts coming soon.",
+  whatIDoIntro:
+    "Web apps, mobile builds, UI work, and the tricky problems in between — four areas where I spend most of my time.",
 } as const;
 
 /** Disposable, throwaway, and commonly abused email domains. */
@@ -355,22 +363,22 @@ export const SERVICES = [
   {
     title: "Web Development",
     description:
-      "Websites and web apps with React, Next.js, Vue, and Nuxt. I focus on speed, accessibility, and code that won't fight you later.",
+      "Websites and web apps with React, Next.js, Vue, and Nuxt. Speed, accessibility, and code that's easy to maintain later.",
   },
   {
     title: "Mobile Development",
     description:
-      "iOS and Android from one codebase with Flutter and React Native. Apps that feel native without maintaining two separate builds.",
+      "iOS and Android from one codebase with Flutter and React Native. Native feel without running two separate apps.",
   },
   {
     title: "UI/UX Design",
     description:
-      "Interfaces that are easy to use — whether it's a landing page or a full dashboard. Good design should get out of the way.",
+      "Landing pages, dashboards, and flows that are straightforward to use. Good design should get out of the way.",
   },
   {
     title: "Problem Solving",
     description:
-      "Stuck on a bug, a slow page, or a messy architecture? I like digging into hard problems across the stack.",
+      "Slow pages, stubborn bugs, messy architecture — I like digging into hard problems across the stack.",
   },
 ];
 
